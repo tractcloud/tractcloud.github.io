@@ -130,7 +130,7 @@
         <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav-pills nav-justified">
-                        
+
                         <li>
                             <!-- <a href="https://arxiv.org/abs/2207.08975" target='_blank'> -->
                             <img src="./images/cover_page.png" height="80px"><br>
@@ -181,9 +181,9 @@
                 <h3>
                     Overview
                 </h3>
-                <img src="./images/Overview_v2.png" class="img-responsive" alt="overview"><br>
+                <img src="./images/overview_v3.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                    Diffusion MRI tractography is an advanced imaging technique that enables in vivo mapping of the brain's white matter connections. White matter parcellation classifies tractography streamlines into clusters or anatomically meaningful tracts. It enables quantification and visualization of whole-brain tractography. Currently, most parcellation methods focus on the deep white matter (DWM), whereas fewer methods address the superficial white matter (SWM) due to its complexity. We propose a novel two-stage deep-learning-based framework, Superficial White Matter Analysis (SupWMA), that performs an efficient and consistent parcellation of 198 SWM clusters from whole-brain tractography. A point-cloud-based network is adapted to our SWM parcellation task, and supervised contrastive learning enables more discriminative representations between plausible streamlines and outliers for SWM. We train our model on a large-scale tractography dataset including streamline samples from labeled long- and medium-range (over 40 mm) SWM clusters and anatomically implausible streamline samples, and we perform testing on six independently acquired datasets of different ages and health conditions (including neonates and patients with space-occupying brain tumors). Compared to several state-of-the-art methods, SupWMA obtains highly consistent and accurate SWM parcellation results on all datasets, showing good generalization across the lifespan in health and disease. In addition, the computational speed of SupWMA is much faster than other methods.
+                    Diffusion MRI tractography parcellation classifies streamlines into anatomical fiber tracts to enable quantification and visualization for clinical and scientific applications. Current tractography parcellation methods rely heavily  on registration, but registration inaccuracies can affect parcellation and the computational cost of registration is high for large-scale datasets. Recently, deep-learning-based methods have been proposed for tractography parcellation using various types of representations for streamlines. However, these methods only focus on the information from a single streamline, ignoring geometric relationships between the streamlines in the brain. We propose TractCloud, a registration-free framework that performs whole-brain tractography parcellation directly in individual subject space. We propose a novel, learnable, local-global streamline representation that leverages information from neighboring and whole-brain streamlines to describe the local anatomy and global pose of the brain. We train our framework on a large-scale labeled tractography dataset, which we augment by applying synthetic transforms including rotation, scaling, and translations. We test our framework on five independently acquired datasets across populations and health conditions. TractCloud significantly outperforms several state-of-the-art methods on all testing datasets. TractCloud achieves efficient and consistent whole-brain white matter parcellation across the lifespan (from neonates to elderly subjects, including brain tumor patients) without the need for registration. The robustness and high inference speed of TractCloud make it suitable for large-scale tractography dataset analysis.
                 </p>
             </div>
         </div>
@@ -207,12 +207,15 @@
                 </h3>
                 <p class="text-justify">
                     <ul>
-                        <li>
+                        <!-- <li>
                            Currently, training dataset is available upon request (email: zhangfanmark@gmail.com).
                         </li>
                         <li>
                             Trained model and one test sample can be downloaded <a href="https://github.com/SlicerDMRI/SupWMA/releases/tag/v1.0.0_ISBI" target="_blank">here</a>.
-                        </li>
+                        </li> -->
+                        <li>
+                            Coming soon
+                         </li>
                     </ul>
                 </p>
             </div>
@@ -224,8 +227,8 @@
                 <h3>
                     BibTeX
                 </h3>
-               If you find our project useful in your research, please cite:
-<pre class="w3-panel w3-leftbar w3-light-grey" style="font-family: monospace; font-size: 10px">
+               If you find our project useful in your research, please cite: our MICCAI 2023 paper (arxiv coming soon)
+<!-- <pre class="w3-panel w3-leftbar w3-light-grey" style="font-family: monospace; font-size: 10px">
 @article{XUE2023102759,
     title = {Superficial white matter analysis: An efficient point-cloud-based deep learning framework with supervised contrastive learning for consistent tractography parcellation across populations and dMRI acquisitions},
     author = {Tengfei Xue and Fan Zhang and Chaoyi Zhang and Yuqian Chen and Yang Song and Alexandra J. Golby and Nikos Makris and Yogesh Rathi and Weidong Cai and Lauren J. O'Donnell},
@@ -240,7 +243,7 @@
     author={Xue, Tengfei and Zhang, Fan and Zhang, Chaoyi and Chen, Yuqian and Song, Yang and Makris, Nikos and Rathi, Yogesh and Cai, Weidong and O'Donnell, Lauren J},
     booktitle={2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)},
     year={2022}
-}</pre>
+}</pre> -->
             </div>
         </div>
 
